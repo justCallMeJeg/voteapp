@@ -11,7 +11,9 @@ class CandidateDetailPage extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Text(
           'Candidate Profile',
@@ -72,7 +74,7 @@ class ProfileInfo extends StatelessWidget {
           ),
         ),
         Text(
-          "Bachelor of Science in Information Technology",
+          "Bachelor of Science in Computer Science",
           style: GoogleFonts.roboto(
             fontSize: 16.0,
             fontWeight: FontWeight.w600,

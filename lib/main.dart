@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/pages/dashboard/voter/candidate.dart';
+import 'package:myapp/pages/dashboard/voter/dashboard.dart';
+import 'package:myapp/pages/dashboard/voter/notification.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,10 +31,106 @@ class MyApp extends StatelessWidget {
         // restart instead.
         //
         // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // tested with just a hot reload.색상 구성표: ColorScheme.fromSeed(seedColor: 색상.deepPurple),
       ),
-      home: const CandidateDetailPage(),
+      home: TemporaryPageList(),
+    );
+  }
+}
+
+class TemporaryPageList extends StatefulWidget {
+  const TemporaryPageList({super.key});
+
+  @override
+  State<TemporaryPageList> createState() => _TemporaryPageListState();
+}
+
+class _TemporaryPageListState extends State<TemporaryPageList> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Page List')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 8,
+          children: <Widget>[
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(builder: (context) => const LoginPage()),
+            //     );
+            //   },
+            //   child: const Text('Login Page'),
+            // ),
+            // const Gap(16),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(builder: (context) => const RecoveryPage()),
+            //     );
+            //   },
+            //   child: const Text('Recovery Page'),
+            // ),
+            // const Gap(16),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(builder: (context) => const SignupPage()),
+            //     );
+            //   },
+            //   child: const Text('Signup Page'),
+            // ),
+            // const Gap(16),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(builder: (context) => const AdminDashboard()),
+            //     );
+            //   },
+            //   child: const Text('Admin Dashboard'),
+            // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CandidateDetailPage(),
+                  ),
+                );
+              },
+              child: const Text('Candidate Detail Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const VoterDashboardPage()),
+                );
+              },
+              child: const Text('Voter Dashboard'),
+            ),
+            // const Gap(16),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(builder: (context) => const BallotPage()),
+            //     );
+            //     },
+            //   child: const Text('Ballot Page'),
+            // ),
+            // const Gap(16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const NotificationPage(),
+                  ),
+                );
+              },
+              child: const Text('Notification Page'),
+            ),
+          ], // ElevatedButton(// onPressed: () {// Navigator.of(context).push(// MaterialPageRoute(builder: (context) => const ResultsPage()),// );// },// child: const Text('Results Page'),// ),],
+        ),
+      ),
     );
   }
 }

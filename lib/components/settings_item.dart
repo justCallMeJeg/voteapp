@@ -11,7 +11,7 @@ class SettingsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
         spacing: 8.0,
         children: [
@@ -26,7 +26,7 @@ class SettingsListItem extends StatelessWidget {
               ),
             ),
           ),
-          Icon(Icons.arrow_right, color: Palette.black),
+          Icon(Icons.navigate_next, color: Palette.black),
         ],
       ),
     );
