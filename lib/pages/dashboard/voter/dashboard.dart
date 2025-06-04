@@ -116,6 +116,7 @@ class ProfileSection extends StatelessWidget {
           ),
           Text(
             "Geger John Paul H. Gabayeron",
+            textAlign: TextAlign.center,
             style: GoogleFonts.roboto(
               fontSize: 24.0,
               fontWeight: FontWeight.bold,

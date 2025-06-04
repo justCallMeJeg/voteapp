@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/auth/login.dart';
+import 'package:myapp/pages/auth/recovery.dart';
+import 'package:myapp/pages/auth/signup.dart';
+import 'package:myapp/pages/dashboard/admin/dashboard.dart';
 import 'package:myapp/pages/dashboard/voter/candidate.dart';
 import 'package:myapp/pages/dashboard/voter/dashboard.dart';
 import 'package:myapp/pages/dashboard/voter/notification.dart';
@@ -55,41 +59,40 @@ class _TemporaryPageListState extends State<TemporaryPageList> {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 8,
           children: <Widget>[
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute(builder: (context) => const LoginPage()),
-            //     );
-            //   },
-            //   child: const Text('Login Page'),
-            // ),
-            // const Gap(16),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute(builder: (context) => const RecoveryPage()),
-            //     );
-            //   },
-            //   child: const Text('Recovery Page'),
-            // ),
-            // const Gap(16),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute(builder: (context) => const SignupPage()),
-            //     );
-            //   },
-            //   child: const Text('Signup Page'),
-            // ),
-            // const Gap(16),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute(builder: (context) => const AdminDashboard()),
-            //     );
-            //   },
-            //   child: const Text('Admin Dashboard'),
-            // ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const LoginPage()),
+                );
+              },
+              child: const Text('Login Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const RecoveryPage()),
+                );
+              },
+              child: const Text('Recovery Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const SignUpPage()),
+                );
+              },
+              child: const Text('Signup Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const AdminDashboardPage(),
+                  ),
+                );
+              },
+              child: const Text('Admin Dashboard'),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -103,7 +106,9 @@ class _TemporaryPageListState extends State<TemporaryPageList> {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const VoterDashboardPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const VoterDashboardPage(),
+                  ),
                 );
               },
               child: const Text('Voter Dashboard'),
@@ -127,6 +132,14 @@ class _TemporaryPageListState extends State<TemporaryPageList> {
                 );
               },
               child: const Text('Notification Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const SignUpPage()),
+                );
+              },
+              child: const Text('Signup Page'),
             ),
           ], // ElevatedButton(// onPressed: () {// Navigator.of(context).push(// MaterialPageRoute(builder: (context) => const ResultsPage()),// );// },// child: const Text('Results Page'),// ),],
         ),
