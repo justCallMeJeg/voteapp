@@ -45,7 +45,7 @@ class ProfileSection extends StatelessWidget {
             height: 120.0,
             width: 120.0,
             child: CircleAvatar(
-              backgroundImage: AssetImage('images/GABAYERON.jpg'),
+              backgroundImage: AssetImage('assets/images/JALANDONI.jpg'),
             ),
           ),
           ProfileInfo(),
@@ -64,7 +64,7 @@ class ProfileInfo extends StatelessWidget {
       spacing: 4.0,
       children: [
         Text(
-          "Geger John Paul H. Gabayeron",
+          "Joseph Mikhaeli Jalandoni",
           style: GoogleFonts.roboto(
             fontSize: 24.0,
             fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class BiographySection extends StatelessWidget {
           AspectRatio(
             aspectRatio: 3 / 2,
             child: Image.asset(
-              'images/placeholder.jpg',
+              'assets/images/placeholder.jpg',
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
